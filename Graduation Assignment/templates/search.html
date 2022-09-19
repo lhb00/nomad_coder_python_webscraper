@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Scrapper</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1 aria-busy="true">Searching for results "{{keyword}}":</h1>
+    <h3>{{number}} of results we can get!</h3>
+  <details>
+    <summary>wwr</summary>
+      <figure>
+        <table role="grid">
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>Company\</th>
+              <th>Location</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for wwrs in wwr %}
+            <tr>
+              <td>{{wwrs.position}}</td>
+              <td>{{wwrs.company}}</td>
+              <td>{{wwrs.location}}</td>
+              <td><a href="{{wwrs.link}}" target="_blank">Apply now&rarr;</a></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </figure>
+  </details>
+  <details>
+    <summary>remoteok</summary>
+      <figure>
+        <table role="grid">
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>Company\</th>
+              <th>Location</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for remoteoks in remoteok %}
+            <tr>
+              <td>{{remoteoks.position}}</td>
+              <td>{{remoteoks.company}}</td>
+              <td>{{remoteoks.location}}</td>
+              <td><a href="{{remoteoks.link}}" target="_blank">Apply now&rarr;</a></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    </figure>
+    </details>
+  </main>
+</body>
+</html>
